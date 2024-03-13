@@ -7,6 +7,15 @@
 
 
 #include "modbus.h"
-uint16_t Rx_Buff[16] = {0};
+uint16_t Tx_Buff[16] = {0};
 
 
+void Test_Sending(void)
+{
+    char * msg = "Hello!";
+    SCI_writeCharArray(sci_modbus_BASE,(uint16_t *)(msg),
+                       6);
+
+
+
+}

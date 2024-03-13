@@ -10,7 +10,8 @@
 
 #include <stdbool.h>
 #include <stdint.h>
-
+#include "board.h"
+#include "driverlib.h"
 
 typedef enum
 {
@@ -23,5 +24,8 @@ typedef enum
 }ModbusTransState_e;
 
 
+
+
+extern void Test_Sending(void);
 
 #endif /* MODBUS_INC_MODBUS_H_ */

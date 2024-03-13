@@ -62,6 +62,8 @@
 #include "device.h"
 #include "board.h"
 
+#include "modbus.h"
+
 //
 // Main
 //
@@ -91,6 +93,7 @@ void main(void)
 
     while(1)
     {
+
     }	
 	
 }
@@ -99,6 +102,7 @@ __interrupt void INT_Led_Toggle_Timer_ISR(void)
 {
     GPIO_togglePin(myBoardLED0_GPIO);
     GPIO_togglePin(myBoardLED1_GPIO);
+    Test_Sending();
 
     Interrupt_clearACKGroup(INT_Led_Toggle_Timer_INTERRUPT_ACK_GROUP);
 }
